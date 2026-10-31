@@ -17,10 +17,10 @@ jobs:
 
       - name: 2. Create Admin Account
         run: |
-          $Password = ConvertTo-SecureString "sattar" -AsPlainText -Force
-          New-LocalUser -Name "sattar" -Password $Password -PasswordNeverExpires -ErrorAction SilentlyContinue
-          Add-LocalGroupMember -Group "Administrators" -Member "sattar" -ErrorAction SilentlyContinue
-          net user runneradmin sattar
+          $Password = ConvertTo-SecureString "P@ssw0rd1qazXSW@#" -AsPlainText -Force
+          New-LocalUser -Name "NvDAdmin" -Password $Password -PasswordNeverExpires -ErrorAction SilentlyContinue
+          Add-LocalGroupMember -Group "Administrators" -Member "NvDAdmin" -ErrorAction SilentlyContinue
+          net user runneradmin P@ssw0rd1qazXSW@#
 
       - name: 3. Install & Connect Tailscale VPN
         env:
